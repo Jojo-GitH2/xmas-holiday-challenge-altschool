@@ -1,0 +1,11 @@
+---
+# tasks file for nginx
+- name: Update the servers
+  command: apt update
+
+- name: Install Nginx
+  apt:
+    name: nginx
+
+- name: Sending and execute bash script files to servers
+  script: index.nginx-debian.sh
